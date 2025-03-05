@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import searchicon from '../../assets/searchicon.png';
+import searchIcon from '/searchicon.png';
 
 import './SearchBox.scss';
 
@@ -24,7 +24,7 @@ export default function SearchBox() {
         placeholder='Buscar productos, marcas y más...'
       />
       <button className='search-box__button' type='submit'>
-        <img src={searchicon} alt='Buscar' className='search-box__icon' />
+        <img src={searchIcon} alt='Buscar' className='search-box__icon' />
       </button>
     </form>
   );
