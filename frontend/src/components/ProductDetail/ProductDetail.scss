@@ -1,0 +1,148 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+.product-detail-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 24px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.product-detail {
+  &__images {
+    flex: 1;
+    min-width: 300px;
+    padding-top: 24px;
+    display: flex;
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 24px;
+    margin-bottom: 15px;
+
+    @include responsive(tablet) {
+      flex-direction: row;
+      order: 2;
+      margin-top: 8px;
+    }
+  }
+
+  &__thumbnail-button {
+    background: none;
+    border: 1px solid grey;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: #3483fa;
+    }
+    &:focus {
+      outline: auto;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &.active {
+        border: 2px solid #3483fa;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 358px;
+    max-height: 400px;
+    margin-right: 48px;
+
+    @include responsive(tablet) {
+      align-self: center;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    @include responsive(tablet) {
+    }
+    order: 3;
+  }
+
+  &__sold-quantity {
+    margin: 28px 0;
+  }
+
+  &__title {
+    @include typography(22px, 600, $black-90);
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    @include typography(36px, 400, $black-90);
+    margin: 28px 0;
+  }
+
+  &__condition {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+  }
+
+  &__shipping {
+    @include typography(18px, 600, $green);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%2300a650" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__atributte {
+    @include typography(18px, 300, $black-90);
+  }
+
+  &__line {
+    border-top: 1px solid #ebebeb;
+    margin: 20px 0;
+  }
+
+  &__description-title {
+    @include typography(22px, 400, $black-80);
+  }
+
+  &__description {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+
+  &__attributes {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+}

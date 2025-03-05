@@ -1,0 +1,42 @@
+.search-box {
+  width: 100%; // Para que tome el ancho disponible dentro del header
+  max-width: 1018px; // Máximo ancho permitido
+  display: flex;
+  min-width: 120px;
+
+  &__input {
+    flex: 1;
+    margin-left: 34px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    min-width: 120px;
+  }
+  &__button {
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    margin-right: 50px;
+  }
+  &__button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%; // Ajusta la posición desde arriba
+    height: 50%; // La línea ocupa la mitad del botón
+    width: 1px;
+    background-color: #d9d9d9; // Color gris de la línea
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

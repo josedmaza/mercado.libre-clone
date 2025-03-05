@@ -1,0 +1,21 @@
+@mixin typography($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin responsive($screen) {
+  @if $screen == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $screen == mobile {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $screen == small-mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
