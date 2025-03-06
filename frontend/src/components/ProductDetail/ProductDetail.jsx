@@ -21,7 +21,7 @@ const ProductDetail = ({ product }) => {
     <div className='product-detail-container'>
       <div className='product-detail__images'>
         <div className='product-detail__thumbnails'>
-          {pictures.map((pic, index) => (
+          {pictures.slice(0, 5).map((pic, index) => (
             <button key={index} className='product-detail__thumbnail-button'>
               <img
                 src={pic}

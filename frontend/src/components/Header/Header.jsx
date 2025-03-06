@@ -1,6 +1,7 @@
 import logo from '/src/assets/logo.png';
 import SearchBox from '/src/components/SearchBox/SearchBox';
 import './Header.scss';
+import BoxMessage from '/src/components/BoxMessage/BoxMessage';
 
 export default function Header() {
   return (
@@ -10,6 +11,7 @@ export default function Header() {
           <img src={logo} alt='Mercado Libre' className='header__logo' />
         </a>
         <SearchBox />
+        <BoxMessage />
       </div>
     </header>
   );

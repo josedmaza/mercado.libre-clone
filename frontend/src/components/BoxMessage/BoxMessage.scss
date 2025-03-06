@@ -1,0 +1,25 @@
+.search-help-message {
+  position: absolute;
+  top: 50px;
+  right: 400px;
+  background-color: #3483fa;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-help-message__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-help-message__close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
